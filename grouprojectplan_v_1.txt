@@ -1,0 +1,11 @@
+Sivun rakenne;
+
+Header - Otsikko(etusivu/refresh?), navbar(5 eri sivua(duck.ai, YouTube etc.)), ostoskori(hover/click) ja profiilikuva(linkki)
+mobile header - hamburger menu(navbar piilossa), otsikko, ostoskori ja profiilikuva
+
+main content vasen - tuotekuva, kuvagalleria/lightbox modal view
+main content oikea - putiikin nimi, tuotteen nimi, tuotekuvaus, hinta, alennus, kokonaishinta, määrä selektori, add-to-cart nappula 
+
+ostoskori - if empty, empty, minikuva, tuote nimi, hinta, kappale määrä, kokonaishinta, delete nappula, checkout nappula
+
+lightbox - klikkamalla isoa kuvaa, avaa gallerian, klikkamalla pientä kuvaa, vaihtaa isoa kuvaa
