@@ -11,54 +11,55 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
+  <div class="full-container">
+  <div class="left-container">
   <div class="modal-image-container">
-    <img id="modal-image" src="images/image-product-1.jpg" alt="Large image" style="width: 25%">
+    <img id="modal-image" class="image-large" src="images/image-product-1.jpg" alt="Large image">
   </div>
   <div id="thumbnail-container" class="thumbnailcontainer">
-    <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="image-small" style="width: 5%" data-large="images/image-product-1.jpg" data-number="1">
-    <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="image-small" style="width: 5%" data-large="images/image-product-2.jpg" data-number="2">
-    <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small" style="width: 5%" data-large="images/image-product-3.jpg" data-number="3">
-    <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small" style="width: 5%" data-large="images/image-product-4.jpg" data-number="4">
+    <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="image-small" data-large="images/image-product-1.jpg">
+    <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="image-small" data-large="images/image-product-2.jpg">
+    <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small" data-large="images/image-product-3.jpg">
+    <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small" data-large="images/image-product-4.jpg">
+  </div>
   </div>
   <div id="theModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <h1>INSANE LIGHTBOOOOOX</h1>
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 4</div>
-          <img src="images/image-product-1.jpg" alt="image1" style="width:100%">
+          <img src="images/image-product-1.jpg" alt="image1" class="lightbox-image">
         </div>
         <div class="mySlides fade">
-          <div class="numbertext">2 / 4</div>
-          <img src="images/image-product-2.jpg" alt="image2" style="width:100%">
+          <img src="images/image-product-2.jpg" alt="image2" class="lightbox-image">
         </div>
         <div class="mySlides fade">
-          <div class="numbertext">3 / 4</div>
-          <img src="images/image-product-3.jpg" alt="image3" style="width:100%">
+          <img src="images/image-product-3.jpg" alt="image3" class="lightbox-image">
         </div>
         <div class="mySlides fade">
-          <div class="numbertext">4 / 4</div>
-          <img src="images/image-product-4.jpg" alt="image4" style="width:100%">
+          <img src="images/image-product-4.jpg" alt="image4" class="lightbox-image">
         </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
-      <div style="text-align: center">
-        <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="thumbnail dot" style="width: 10%" onclick="currentSlide(1)">
-        <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="thumbnail dot" style="width: 10%" onclick="currentSlide(2)">
-        <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="thumbnail dot" style="width: 10%" onclick="currentSlide(3)">
-        <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="thumbnail dot" style="width: 10%" onclick="currentSlide(4)">
+      <div id="modal-thumbnail-container" style="text-align: center">
+        <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="thumbnail" >
+        <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="thumbnail" >
+        <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="thumbnail" >
+        <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="thumbnail" >
       </div>
     </div>
   </div>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Lightboxman</a>.
+  <div class="right-container">
+    <p>company name</p>
+    <h2>item name</h2>
+    <p>item description</p>
+    <h3>reduced price</h3>
+    <p>full price</p>
+  </div>
   </div>
   <script src="script.js">
   </script>
 </body>
-</html>
+</h
