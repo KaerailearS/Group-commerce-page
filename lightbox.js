@@ -8,8 +8,12 @@ function showSlides(n){
   let i;
   let slides = document.getElementsByClassName('mySlides');
   let thumbnails = document.getElementsByClassName('thumbnail');
-  if (n>slides.length){slideIndex=1}
-  if (n<1){slideIndex=slides.length}
+  if (n>slides.length){
+    slideIndex=1;
+  }
+  if (n<1){
+    slideIndex=slides.length;
+  }
   for(i=0;i<slides.length;i++){
     slides[i].style.display="none";
   }
@@ -42,19 +46,24 @@ document.getElementById('thumbnail-container').addEventListener('click', functio
       document.getElementById('modal-image').src = largeImageSource;
       slideIndex = event.target.getAttribute('data-number');
       currentSlide(slideIndex);
+      console.log(slideIndex);
   }
 });
 document.getElementById('modal-thumbnail-container').addEventListener('click', function(event) {
   if (event.target.alt === "image1thumbnail") {
    currentSlide(1);
+   console.log(slideIndex);
   }
   if (event.target.alt === "image2thumbnail") {
    currentSlide(2);
+   console.log(slideIndex);
   }
   if (event.target.alt === "image3thumbnail") {
    currentSlide(3);
+   console.log(slideIndex);
   }
   if (event.target.alt === "image4thumbnail") {
    currentSlide(4);
+   console.log(slideIndex);
   }
 });
