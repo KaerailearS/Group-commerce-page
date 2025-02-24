@@ -36,25 +36,29 @@ window.onclick = (event)=>{
   }
 }
 // spaghetti code
+// event listener for changing the highlighted picture on the main site
 document.getElementById('thumbnail-container').addEventListener('click', function(event) {
   if (event.target.tagName === "IMG") {
-      const largeImageSource = event.target.getAttribute('data-large');
+      const largeImageSource = event.target.getAttribute('data-large'); 
       document.getElementById('modal-image').src = largeImageSource;
       slideIndex = event.target.getAttribute('data-number');
       currentSlide(slideIndex);
+      console.log(slideIndex);
   }
 });
+// event delegation for the four navigational images in the lightbox
 document.getElementById('modal-thumbnail-container').addEventListener('click', function(event) {
   if (event.target.alt === "image1thumbnail") {
    currentSlide(1);
-  }
-  if (event.target.alt === "image2thumbnail") {
+   console.log(slideIndex);
+  } if (event.target.alt === "image2thumbnail") {
    currentSlide(2);
-  }
-  if (event.target.alt === "image3thumbnail") {
+   console.log(slideIndex);
+  } if (event.target.alt === "image3thumbnail") {
    currentSlide(3);
-  }
-  if (event.target.alt === "image4thumbnail") {
+   console.log(slideIndex);
+  } if (event.target.alt === "image4thumbnail") {
    currentSlide(4);
+   console.log(slideIndex);
   }
 });
