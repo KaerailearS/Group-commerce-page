@@ -7,15 +7,6 @@
   * {
     box-sizing: border-box;
   }
-  .full-container { /*one container to hold both left and right sides of content*/
-    display: flex;
-  }
-  .left-container { /*holds the images and lightbox clickables*/
-    max-width: 500px;
-  }
-  .right-container { /*holds the item information*/
-    max-width: 500px;
-  }
   .slideshow-container {  /*slideshow inside the lightbox/modal*/
     position: relative;
     display: grid;
