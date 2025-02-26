@@ -112,9 +112,8 @@ body {
 }
 
 /* Different breakpoints */
-@media (max-width: 1440px) {
   .header {
-    margin: 0px 120px;
+    margin: 0px 180px;
   }
   .nav-bar {
     gap: 50px;
@@ -125,7 +124,7 @@ body {
   .cart-and-avatar {
     gap: 20px;
   }
-}
+
 @media (max-width: 1000px) {
   .header {
     margin: 0px 50px;

@@ -92,6 +92,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
+  margin-right: 15%;
 }
 
 .company-name {
@@ -191,6 +192,7 @@
   cursor: pointer;
   gap: 1.5rem;
   flex: 2;
+  max-width: 283px;
 }
 
 .add-to-cart-btn:hover {
