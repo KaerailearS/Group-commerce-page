@@ -83,43 +83,46 @@
       
     </div>
     <section class="main">
-    <!-- Taavin osa -->
-    <div class="left-container">
+
+      <!-- Taavin osa -->
+      <div class="taavi-container">
+        <!--image that opens the lightbox when clicked-->
         <div class="modal-image-container">
           <img id="modal-image" class="image-large" src="images/image-product-1.jpg" alt="Large image">
         </div>
+        <!--smaller images below, clicking these changes the main image-->
         <div id="thumbnail-container" class="thumbnailcontainer">
-          <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="image-small" data-large="images/image-product-1.jpg">
-          <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="image-small" data-large="images/image-product-2.jpg">
-          <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small" data-large="images/image-product-3.jpg">
-          <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small" data-large="images/image-product-4.jpg">
+          <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="image-small js-image-small active-thumbnail" data-large="images/image-product-1.jpg" data-number="1">
+          <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="image-small js-image-small" data-large="images/image-product-2.jpg" data-number="2">
+          <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small js-image-small" data-large="images/image-product-3.jpg" data-number="3">
+          <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small js-image-small" data-large="images/image-product-4.jpg" data-number="4">
         </div>
-        <div id="theModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="slideshow-container" style="text-align: center;">
-              <div class="mySlides fade">
-                <img src="images/image-product-1.jpg" alt="image1" class="lightbox-image">
-              </div>
-              <div class="mySlides fade">
-                <img src="images/image-product-2.jpg" alt="image2" class="lightbox-image">
-              </div>
-              <div class="mySlides fade">
-                <img src="images/image-product-3.jpg" alt="image3" class="lightbox-image">
-              </div>
-              <div class="mySlides fade">
-                <img src="images/image-product-4.jpg" alt="image4" class="lightbox-image">
-              </div>
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div><!---->
+      <div id="theModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="slideshow-container" style="text-align: center;">
+            <div class="mySlides fade">
+              <img src="images/image-product-1.jpg" alt="image1" class="lightbox-image">
             </div>
-            <br>
-            <div id="modal-thumbnail-container" style="text-align: center;">
-              <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="thumbnail" >
-              <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="thumbnail" >
-              <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="thumbnail" >
-              <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="thumbnail" >
+            <div class="mySlides fade">
+              <img src="images/image-product-2.jpg" alt="image2" class="lightbox-image">
             </div>
+            <div class="mySlides fade">
+              <img src="images/image-product-3.jpg" alt="image3" class="lightbox-image">
+            </div>
+            <div class="mySlides fade">
+              <img src="images/image-product-4.jpg" alt="image4" class="lightbox-image">
+            </div>
+            <a class="prev" onclick="plusSlides(-1); console.log(slideIndex)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1); console.log(slideIndex)">&#10095;</a>
+          </div>
+          <br>
+          <div id="modal-thumbnail-container" style="text-align: center;">
+            <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="thumbnail" >
+            <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="thumbnail" >
+            <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="thumbnail" >
+            <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="thumbnail" >
           </div>
         </div>
       </div>
@@ -155,6 +158,7 @@
           </button>
   
         </div>
+      </div>
     </section>
     <script src="header.js"></script>
     <script src="lightbox.js"></script>
