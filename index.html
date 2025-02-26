@@ -70,18 +70,9 @@
       </div> 
       <div class="cart-preview">
         <p class="cart">Cart</p>
-        <span></span>
-       
         <div class="cart-info">
-          <img src="images/image-product-1-thumbnail.jpg" alt="Added product" />
-          <p>Fall Limited Edition Sneakers</p>
-          <span>$125.00 x</span>
-          <img
-            class="delete-btn"
-            src="images/icon-delete.svg"
-            alt="delete-btn"
-          />
-          <button>Checkout</button>
+          <button class="delete-btn js-delete-btn">d</button>
+          <button class="checkout-btn js-checkout-btn"></button>
         </div>
       </div>
     </div>
@@ -232,16 +223,16 @@
         </div>
         <div class="product-purchase">
           <div class="quantity">
-            <button class="reduce-btn">
+            <button class="reduce-btn js-reduce-btn">
               <img src="images/icon-minus.svg" alt="Minus" />
             </button>
-            <span class="added-quantity">0</span>
-            <button class="add-btn">
+            <span class="added-quantity js-added-quantity">0</span>
+            <button class="add-btn js-add-btn">
               <img src="images/icon-plus.svg" alt="Plus" />
             </button>
           </div>
 
-          <button class="add-to-cart-btn">
+          <button class="add-to-cart-btn js-add-to-cart-btn">
             <img class="icon-cart" src="images/icon-cart.svg" alt="cart icon" />
             Add to cart
           </button>
@@ -250,5 +241,6 @@
     </section>
     <script src="header.js"></script>
     <script src="lightbox.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
