@@ -31,14 +31,14 @@
             alt="menu-icon"
           />
         </div>
-        <div class="close-icon" id="close-icon" onclick="toggleMenu()">
+        <div class="close-icon" id="close" onclick="toggleMenu()">
           <img
             class="close-image"
             src="./images/icon-close.svg"
             alt="close-icon"
           />
         </div>
-        <ul class="menu" id="menu">
+        <ul class="hamburger-menu" id="menu">
           <li><a href="https://duckduckgo.com/">Collections</a></li>
           <li><a href="https://duckduckgo.com/">Men</a></li>
           <li><a href="https://duckduckgo.com/">About</a></li>
@@ -73,90 +73,161 @@
         <p class="cart">Cart</p>
         <span></span>
         <div class="cart-info">
-          <img src="images/image-product-1-thumbnail.jpg" alt="Added product">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Added product" />
           <p>Fall Limited Edition Sneakers</p>
           <span>$125.00 x</span>
-          <img class="delete-btn" src="images/icon-delete.svg" alt="delete-btn">
+          <img
+            class="delete-btn"
+            src="images/icon-delete.svg"
+            alt="delete-btn"
+          />
           <button>Checkout</button>
         </div>
       </div>
-      
     </div>
     <section class="main">
-
       <!-- Taavin osa -->
       <div class="taavi-container">
         <!--image that opens the lightbox when clicked-->
         <div class="modal-image-container">
-          <img id="modal-image" class="image-large" src="images/image-product-1.jpg" alt="Large image">
+          <img
+            id="modal-image"
+            class="image-large"
+            src="images/image-product-1.jpg"
+            alt="Large image"
+          />
         </div>
         <!--smaller images below, clicking these changes the main image-->
         <div id="thumbnail-container" class="thumbnailcontainer">
-          <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="image-small js-image-small active-thumbnail" data-large="images/image-product-1.jpg" data-number="1">
-          <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="image-small js-image-small" data-large="images/image-product-2.jpg" data-number="2">
-          <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small js-image-small" data-large="images/image-product-3.jpg" data-number="3">
-          <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small js-image-small" data-large="images/image-product-4.jpg" data-number="4">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image1thumbnail"
+            class="image-small js-image-small active-thumbnail"
+            data-large="images/image-product-1.jpg"
+            data-number="1"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image2thumbnail"
+            class="image-small js-image-small"
+            data-large="images/image-product-2.jpg"
+            data-number="2"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image3thumbnail"
+            class="image-small js-image-small"
+            data-large="images/image-product-3.jpg"
+            data-number="3"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image4thumbnail"
+            class="image-small js-image-small"
+            data-large="images/image-product-4.jpg"
+            data-number="4"
+          />
         </div>
-      </div><!---->
+      </div>
+      <!---->
       <div id="theModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <div class="slideshow-container" style="text-align: center;">
+          <div class="slideshow-container" style="text-align: center">
             <div class="mySlides fade">
-              <img src="images/image-product-1.jpg" alt="image1" class="lightbox-image">
+              <img
+                src="images/image-product-1.jpg"
+                alt="image1"
+                class="lightbox-image"
+              />
             </div>
             <div class="mySlides fade">
-              <img src="images/image-product-2.jpg" alt="image2" class="lightbox-image">
+              <img
+                src="images/image-product-2.jpg"
+                alt="image2"
+                class="lightbox-image"
+              />
             </div>
             <div class="mySlides fade">
-              <img src="images/image-product-3.jpg" alt="image3" class="lightbox-image">
+              <img
+                src="images/image-product-3.jpg"
+                alt="image3"
+                class="lightbox-image"
+              />
             </div>
             <div class="mySlides fade">
-              <img src="images/image-product-4.jpg" alt="image4" class="lightbox-image">
+              <img
+                src="images/image-product-4.jpg"
+                alt="image4"
+                class="lightbox-image"
+              />
             </div>
-            <a class="prev" onclick="plusSlides(-1); console.log(slideIndex)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1); console.log(slideIndex)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1); console.log(slideIndex)"
+              >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1); console.log(slideIndex)"
+              >&#10095;</a
+            >
           </div>
-          <br>
-          <div id="modal-thumbnail-container" style="text-align: center;">
-            <img src="images/image-product-1-thumbnail.jpg" alt="image1thumbnail" class="thumbnail" >
-            <img src="images/image-product-2-thumbnail.jpg" alt="image2thumbnail" class="thumbnail" >
-            <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="thumbnail" >
-            <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="thumbnail" >
+          <br />
+          <div id="modal-thumbnail-container" style="text-align: center">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image1thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image2thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="image3thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="image4thumbnail"
+              class="thumbnail"
+            />
           </div>
         </div>
       </div>
 
-    <div class="right-container">
+      <div class="right-container">
         <div class="product-detail">
           <h2 class="company-name">SNEAKER COMPANY</h2>
           <h1 class="product-title">Fall Limited Edition Sneakers</h1>
-          <p class="product-description">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
         </div>
-  
+
         <div class="product-price">
-            <div class="price-row">
-              <div class="new-price">$125.00</div>
-              <div class="discount">50%</div>
-            </div>
-            <div class="origin-price">$250.00</div>
+          <div class="price-row">
+            <div class="new-price">$125.00</div>
+            <div class="discount">50%</div>
+          </div>
+          <div class="origin-price">$250.00</div>
         </div>
         <div class="product-purchase">
           <div class="quantity">
             <button class="reduce-btn">
-             <img src="images/icon-minus.svg" alt="Minus">
+              <img src="images/icon-minus.svg" alt="Minus" />
             </button>
             <span class="added-quantity">0</span>
             <button class="add-btn">
-              <img src="images/icon-plus.svg" alt="Plus">
+              <img src="images/icon-plus.svg" alt="Plus" />
             </button>
           </div>
-  
+
           <button class="add-to-cart-btn">
-           <img class="icon-cart" src="images/icon-cart.svg" alt="cart icon">
+            <img class="icon-cart" src="images/icon-cart.svg" alt="cart icon" />
             Add to cart
           </button>
-  
         </div>
       </div>
     </section>
