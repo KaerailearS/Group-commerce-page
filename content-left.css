@@ -1,30 +1,32 @@
-
 .mobile-gallery {
   display: none;
 }
 * {
   box-sizing: border-box;
 }
-.taavi-container{
+.taavi-container {
   max-width: 480px;
-  margin-left: 15%;
-  margin-top: 5%;
+  margin-left: 12%;
 }
-.slideshow-container {  /*slideshow inside the lightbox/modal*/
+.slideshow-container {
+  /*slideshow inside the lightbox/modal*/
   position: relative;
   display: grid;
   place-items: center;
 }
-.mySlides {  /*hiding the pictures until activated*/
+.mySlides {
+  /*hiding the pictures until activated*/
   display: none;
 }
-.lightbox-image {  /* large image in lightbox*/
+.lightbox-image {
+  /* large image in lightbox*/
   border-radius: 2.5%;
   max-width: 100%;
   max-height: 100%;
   scale: 1.1;
 }
-.prev {  /*buttons for browsing the gallery -- W I P -- */
+.prev {
+  /*buttons for browsing the gallery -- W I P -- */
   cursor: pointer;
   position: absolute;
   top: 61%;
@@ -37,7 +39,8 @@
   user-select: none;
   left: 12vw;
 }
-.next {  /*move the next button from underneath the prev button*/
+.next {
+  /*move the next button from underneath the prev button*/
   cursor: pointer;
   position: absolute;
   top: 61%;
@@ -50,7 +53,9 @@
   right: 12vw;
   border-radius: 50%;
 }
-.prev:hover, .next:hover {  /*hover highlights for both navigation buttons*/
+.prev:hover,
+.next:hover {
+  /*hover highlights for both navigation buttons*/
   color: orange;
 }
 .close {
@@ -62,12 +67,14 @@
   top: 9%;
   z-index: 200;
 }
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: orange;
   text-decoration: none;
   cursor: pointer;
 }
-.thumbnail { /*thumbnail navigational buttons for the lightbox*/
+.thumbnail {
+  /*thumbnail navigational buttons for the lightbox*/
   cursor: pointer;
   margin: 40px 15px 0;
   background-color: #bbb;
@@ -77,7 +84,8 @@
   width: 10%;
   max-width: 90px;
 }
-.active{ /* currently active navigation thumbnail */
+.active {
+  /* currently active navigation thumbnail */
   position: relative;
   max-height: 100%;
   width: 10%;
@@ -94,17 +102,18 @@
 .thumbnail:hover {
   filter: brightness(1.2);
 }
-.modal { /* the modal itself*/
+.modal {
+  /* the modal itself*/
   display: none; /* hidden as default */
   position: fixed;
   z-index: 1; /* shows on top of webpage */
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.7); 
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .modal-content {
   margin: 0 auto;
@@ -142,7 +151,7 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media (max-width: 1400px){
+@media (max-width: 1400px) {
   .prev {
     top: 63%;
     padding: 13px 21px;
@@ -169,7 +178,7 @@
     margin-top: 4%;
   }
 }
-@media (max-width: 1300px){
+@media (max-width: 1300px) {
   .prev {
     top: 63%;
     padding: 12px 20px;
@@ -196,7 +205,7 @@
     margin-top: 4%;
   }
 }
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .prev {
     top: 63%;
     padding: 11px 19px;
@@ -208,8 +217,8 @@
     padding: 11px 19px;
     font-size: 15px;
     right: 12vw;
-  } */
-  .close {
+  }
+  */ .close {
     font-size: 40px;
     left: 62%;
     top: 10%;
@@ -223,7 +232,7 @@
     margin-top: 4%;
   }
 }
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .prev {
     top: 63%;
     padding: 10px 18px;
@@ -235,8 +244,8 @@
     padding: 10px 18px;
     font-size: 14px;
     right: 12vw;
-  } */
-  .close {
+  }
+  */ .close {
     font-size: 40px;
     left: 62%;
     top: 11%;
@@ -250,7 +259,7 @@
     margin-top: 4%;
   }
 }
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .prev {
     top: 65%;
     padding: 9px 17px;
@@ -277,7 +286,7 @@
     margin-top: 4%;
   }
 }
-@media (max-width: 900px){
+@media (max-width: 900px) {
   .prev {
     top: 65%;
     padding: 8px 16px;
@@ -305,25 +314,25 @@
   }
 }
 /* switch to mobile view below 800px*/
-@media (max-width: 800px){
-  .main{
+@media (max-width: 800px) {
+  .main {
     margin: 0;
     padding: 0rem;
   }
   .mobile-gallery {
     display: block;
   }
-  .mobile-gallery-image{
+  .mobile-gallery-image {
     width: 375px;
   }
-  .taavi-container{
+  .taavi-container {
     display: none;
   }
   .mobile-gallery-slide {
-      display: none; /* Hide all slides by default */
+    display: none; /* Hide all slides by default */
   }
   .mobile-gallery-slide img {
-      width: 100%; /* Make images responsive */
+    width: 100%; /* Make images responsive */
   }
   .mobile-prev {
     cursor: pointer;

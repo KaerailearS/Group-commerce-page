@@ -1,4 +1,3 @@
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -11,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 .cart-preview {
@@ -74,13 +73,13 @@
   height: 15px;
   margin-left: auto;
 }
-@media (min-width:801px){
-.main{
-  display: flex;
-  padding: 2rem;
-  font-size: 16px;
-  gap: 2rem;
-}
+@media (min-width: 801px) {
+  .main {
+    display: flex;
+    padding: 2.5rem 2rem;
+    font-size: 16px;
+    gap: 2rem;
+  }
 }
 .left-container {
   flex: 1;
@@ -111,10 +110,10 @@
 .product-title {
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: hsl(220, 13%, 13%); 
+  color: hsl(220, 13%, 13%);
 }
 
-.product-description{
+.product-description {
   color: hsl(219, 9%, 45%);
   margin-bottom: 1.5rem;
 }
@@ -166,14 +165,14 @@
   max-width: 150px;
 }
 
-.reduce-btn, .add-btn {
+.reduce-btn,
+.add-btn {
   border: none;
   background: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .added-quantity {
   font-weight: 700;
@@ -206,7 +205,6 @@
   filter: brightness(0); /*brightness(0) darkens the image completely*/
 }
 
-
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -214,11 +212,11 @@
 
   .right-container {
     width: 100%;
-    padding: 0 1rem; 
+    padding: 0 1rem;
   }
 
   .product-title {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .product-price {
@@ -226,26 +224,25 @@
     justify-content: space-between;
     margin-bottom: 1rem;
   }
-  
 
-  .price-row, .origin-price {
+  .price-row,
+  .origin-price {
     margin-bottom: 0;
     display: flex;
     align-items: center;
   }
 
-
   .product-purchase {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .quantity {
-    width: 100%; 
-    justify-content: space-between; 
+    width: 100%;
+    justify-content: space-between;
   }
 
   .add-to-cart-btn {
-    width: 100%; 
+    width: 100%;
   }
 }
 
@@ -271,9 +268,3 @@
     padding: 0.8rem 1rem; 
   }
 } */
-
-
-
-
-
-
