@@ -7,4 +7,6 @@ function toggleMenu() {
   mobile.classList.toggle("active-mobile");
   const close = document.getElementById("close-icon");
   close.classList.toggle("active-close");
+  const background = document.body;
+  background.classList.toggle("active-background");
 }
