@@ -1,7 +1,4 @@
-@media (max-width:599px){
-  * {
-    background-color: red;
-  }
+@media (max-width: 599px) {
   .mySlides {
     display: none;
   }
@@ -175,6 +172,8 @@
     padding: 11px 19px;
     font-size: 15px;
     right: 12vw;
+  } */
+}
   }
   .close {
     font-size: 40px;

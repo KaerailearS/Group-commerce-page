@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"/>
-  <link rel="stylesheet" href="header.css"/>
-  <link rel="stylesheet" href="content-left.css">
-  <link rel="stylesheet" href="content-right.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet"/>
-  <title>Frontend Mentor | E-commerce product page</title>
-</head>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="content-left.css" />
+    <link rel="stylesheet" href="content-right.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
   <body>
     <div class="header">
-      <!-- <div class="topnav">
-        <a href="#home" class="active"
-          ><img class="cart-icon" src="./images/icon-menu.svg" alt="menu-img"
-        /></a>
-        <div id="myLinks">
-          <a href="https://duckduckgo.com/">Collections</a>
-          <a href="https://duckduckgo.com/">Men</a>
-          <a href="https://duckduckgo.com/">About</a>
-          <a href="https://duckduckgo.com/">Women</a>
-          <a href="https://duckduckgo.com/">Contact</a>
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="hamburger-icon" id="hamburger" onclick="toggleMenu()">
+          <img
+            class="hamburger-image"
+            src="./images/icon-menu.svg"
+            alt="menu-icon"
+          />
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <img class="cart-icon" src="./images/icon-menu.svg" alt="menu-img" />
-        </a>
-      </div> -->
+        <div class="close-icon" id="close-icon" onclick="toggleMenu()">
+          <img
+            class="close-image"
+            src="./images/icon-close.svg"
+            alt="close-icon"
+          />
+        </div>
+        <ul class="menu" id="menu">
+          <li><a href="https://duckduckgo.com/">Collections</a></li>
+          <li><a href="https://duckduckgo.com/">Men</a></li>
+          <li><a href="https://duckduckgo.com/">About</a></li>
+          <li><a href="https://duckduckgo.com/">Women</a></li>
+          <li><a href="https://duckduckgo.com/">Contact</a></li>
+        </ul>
+      </div>
       <div class="nav-bar">
         <a href=""
           ><img class="site-logo" src="./images/logo.svg" alt="sneakers-logo"
@@ -52,8 +68,22 @@
             alt="avatar-img"
         /></a>
       </div>
+
+      <div class="cart-preview">
+        <p class="cart">Cart</p>
+        <span></span>
+        <div class="cart-info">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Added product">
+          <p>Fall Limited Edition Sneakers</p>
+          <span>$125.00 x</span>
+          <img class="delete-btn" src="images/icon-delete.svg" alt="delete-btn">
+          <button>Checkout</button>
+        </div>
+      </div>
+      
     </div>
     <section class="main">
+
       <!-- Taavin osa -->
       <div class="taavi-container">
         <!--image that opens the lightbox when clicked-->
@@ -96,8 +126,8 @@
           </div>
         </div>
       </div>
-  
-      <div class="right-container">
+
+    <div class="right-container">
         <div class="product-detail">
           <h2 class="company-name">SNEAKER COMPANY</h2>
           <h1 class="product-title">Fall Limited Edition Sneakers</h1>
@@ -114,11 +144,11 @@
         <div class="product-purchase">
           <div class="quantity">
             <button class="reduce-btn">
-              <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
+             <img src="images/icon-minus.svg" alt="Minus">
             </button>
             <span class="added-quantity">0</span>
             <button class="add-btn">
-              <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+              <img src="images/icon-plus.svg" alt="Plus">
             </button>
           </div>
   
