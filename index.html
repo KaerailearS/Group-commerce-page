@@ -67,11 +67,11 @@
             src="./images/Krishna.png"
             alt="avatar-img"
         /></a>
-      </div>
-
+      </div> <!--
       <div class="cart-preview">
         <p class="cart">Cart</p>
         <span></span>
+       
         <div class="cart-info">
           <img src="images/image-product-1-thumbnail.jpg" alt="Added product">
           <p>Fall Limited Edition Sneakers</p>
@@ -80,10 +80,25 @@
           <button>Checkout</button>
         </div>
       </div>
-      
+    -->
     </div>
     <section class="main">
-
+      <div class="mobile-gallery">
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-1.jpg" alt="Image 1" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-2.jpg" alt="Image 2" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-3.jpg" alt="Image 3" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-4.jpg" alt="Image 4" class="mobile-gallery-image">
+        </div>
+        <button class="mobile-prev" onclick="mobileChangeSlide(-1)">&#10094;</button>
+        <button class="mobile-next" onclick="mobileChangeSlide(1)">&#10095;</button>
+      </div>
       <!-- Taavin osa -->
       <div class="taavi-container">
         <!--image that opens the lightbox when clicked-->
@@ -97,7 +112,7 @@
           <img src="images/image-product-3-thumbnail.jpg" alt="image3thumbnail" class="image-small js-image-small" data-large="images/image-product-3.jpg" data-number="3">
           <img src="images/image-product-4-thumbnail.jpg" alt="image4thumbnail" class="image-small js-image-small" data-large="images/image-product-4.jpg" data-number="4">
         </div>
-      </div><!---->
+      </div>
       <div id="theModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
