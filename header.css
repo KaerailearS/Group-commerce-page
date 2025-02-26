@@ -17,7 +17,7 @@ body {
 }
 
 .header {
-  height: 130px;
+  height: 115px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +45,7 @@ body {
 .nav-bar a {
   text-decoration: none;
   color: hsl(219, 9%, 45%);
+  font-size: 1rem;
 }
 
 .nav-bar-content a:hover {
@@ -74,11 +75,11 @@ body {
 }
 
 .site-logo {
-  height: 25px;
+  height: 20px;
 }
 
 .cart-icon {
-  height: 25px;
+  height: 20px;
   cursor: pointer;
   color: red;
 }
@@ -97,7 +98,7 @@ body {
 .avatar-image {
   width: auto;
   border-radius: 50%;
-  height: 55px;
+  height: 50px;
   cursor: pointer;
   border: 3px solid transparent;
 }
@@ -112,18 +113,18 @@ body {
 }
 
 /* Different breakpoints */
-  .header {
-    margin: 0px 180px;
-  }
-  .nav-bar {
-    gap: 50px;
-  }
-  .nav-bar-content {
-    gap: 15px;
-  }
-  .cart-and-avatar {
-    gap: 20px;
-  }
+.header {
+  margin: 0px 180px;
+}
+.nav-bar {
+  gap: 50px;
+}
+.nav-bar-content {
+  gap: 30px;
+}
+.cart-and-avatar {
+  gap: 40px;
+}
 
 @media (max-width: 1000px) {
   .header {
