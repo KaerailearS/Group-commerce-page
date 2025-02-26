@@ -5,7 +5,7 @@ function toggleMenu() {
   hamburger.classList.toggle("active-hamburger");
   const mobile = document.getElementById("mobile-nav");
   mobile.classList.toggle("active-mobile");
-  const close = document.getElementById("close-icon");
+  const close = document.getElementById("close");
   close.classList.toggle("active-close");
   const background = document.body;
   background.classList.toggle("active-background");
