@@ -204,6 +204,10 @@
   height: 1rem;
   filter: brightness(0); /*brightness(0) darkens the image completely*/
 }
+.checkout-btn a{
+  text-decoration: none;
+  color: inherit;
+}
 
 @media (max-width: 768px) {
   .main {
