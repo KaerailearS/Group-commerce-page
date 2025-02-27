@@ -91,7 +91,7 @@
   width: 10%;
   border: 2px orange solid;
   background-color: white;
-  filter: brightness(1.2) contrast(1.1) opacity(0.6);
+  filter: brightness(140%) contrast(0.8) opacity(1);
 }
 .thumbnail {
   background-color: white;
@@ -100,7 +100,8 @@
   width: 10%;
 }
 .thumbnail:hover {
-  filter: brightness(1.2);
+  /* filter: brightness(1.2); */
+  filter: brightness(140%) contrast(0.8) opacity(1);
 }
 .modal {
   /* the modal itself*/
@@ -134,15 +135,25 @@
 .image-large {
   max-width: 95%;
   border-radius: 5%;
+  cursor: pointer;
 }
 .image-small {
   max-width: 19.3%;
   margin-top: 4%;
   margin-right: 5%;
   border-radius: 8%;
+  cursor: pointer;
 }
+
+.image-small:hover {
+  filter: brightness(100%);
+  opacity: 0.5;
+}
+
 .active-thumbnail {
-  border: 2px solid orange;
+  border: 3px solid hsl(26, 100%, 55%);
+  filter: brightness(100%);
+  opacity: 0.5;
 }
 .attribution {
   font-size: 11px;
@@ -258,6 +269,10 @@
     max-width: 15.3%;
     margin-top: 4%;
   }
+
+  .taavi-container {
+    margin-left: 8%;
+  }
 }
 @media (max-width: 1000px) {
   .prev {
@@ -284,6 +299,14 @@
   .image-small {
     max-width: 14.2%;
     margin-top: 4%;
+  }
+
+  .taavi-container {
+    margin-left: 4%;
+  }
+
+  .modal-image-container {
+    width: 105%;
   }
 }
 @media (max-width: 900px) {

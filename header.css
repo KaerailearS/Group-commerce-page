@@ -74,6 +74,28 @@ body {
   gap: 40px;
 }
 
+.cart-container {
+  position: relative;
+  text-align: center;
+}
+
+.quantity-notification {
+  width: 18px;
+  background-color: hsl(26, 100%, 55%);
+  height: 13px;
+  border-radius: 40%;
+  position: absolute;
+  top: -5px;
+  left: 9px;
+  font-size: 0.6rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.notification-hidden {
+  display: none;
+}
+
 .cart-icon {
   height: 20px;
   cursor: pointer;
