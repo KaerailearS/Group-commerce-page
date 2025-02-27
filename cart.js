@@ -87,8 +87,6 @@ function deleteCartItem() {
 function showCart(){
   cartElement.classList.toggle('cart-hidden');
 }
-  showQuantityNotification();
-}
 
 function showQuantityNotification() {
   const quantityNotification = document.getElementById("quantityNotification");
