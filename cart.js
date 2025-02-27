@@ -21,12 +21,12 @@ function addQuantity(n){
 // function to add queued quantity to main cart quantity, reset queue'd quantity, and then render cart with new quantity
 function addToCart(n){
   cartQuantity += addedCartQuantity;
-  addedCartQuantity = 0;
+//  addedCartQuantity = 0; // remove comment if you want to empty queue after adding to cart
   quantityElement.textContent = `${addedCartQuantity}`;
   renderCart();
 }
 // function that renders the cart information - using very basic "semi-hardcoded" methods for information since we've only got one product, price, image etc. - totalprice also using basic methods, quantity*price, with a toFixed(2) to add two decimals.
-// if cartQuantity is zero, renders the empty cart visual. If cartQuantity is 1 or more, renders the image, item name, item price, item quantity and total price, with a delete button next to them.
+// if cartQuantity is zero or below, renders the empty cart visual. If cartQuantity is 1 or more, renders the image, item name, item price, item quantity and total price, with a delete button next to them.
 function renderCart(){
   let totalPrice = cartQuantity*125;
   if(cartQuantity === 0){
