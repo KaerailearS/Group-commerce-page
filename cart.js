@@ -1,15 +1,22 @@
 // javascript elements, buttons etc. on top
 let cartQuantity = 0;
 let addedCartQuantity = 0;
+let timeoutID; // timeoutID for the cart-visibility timeout
 cartElement = document.querySelector('.cart-preview');
 quantityElement = document.querySelector('.js-added-quantity');
 reduceButton = document.querySelector('.js-reduce-btn');
 addButton = document.querySelector('.js-add-btn');
 addToCartButton = document.querySelector('.js-add-to-cart-btn');
 deleteButton = document.querySelector('.js-delete-btn');
-reduceButton.addEventListener('click', ()=>addQuantity(-1));
+cartButton = document.querySelector('.js-cart-icon');
+reduceButton.addEventListener('click', ()=>{
+  if(addedCartQuantity>=1){
+    addQuantity(-1);
+  }
+  });
 addButton.addEventListener('click', ()=>addQuantity(1));
 addToCartButton.addEventListener('click',()=>addToCart());
+cartButton.addEventListener('click',()=>showCart());
 
 // calling for cart to render on loading - shows empty cart (localstorage added later?)
 renderCart();
@@ -24,6 +31,12 @@ function addToCart(n){
 //  addedCartQuantity = 0; // remove comment if you want to empty queue after adding to cart
   quantityElement.textContent = `${addedCartQuantity}`;
   renderCart();
+  // shows cart for three seconds when an item is added 
+  cartElement.classList.remove('cart-hidden');
+  if(timeoutID){clearTimeout(timeoutID)};
+  timeoutID = setTimeout(() => {
+    cartElement.classList.add('cart-hidden');
+  }, 3000);
 }
 // function that renders the cart information - using very basic "semi-hardcoded" methods for information since we've only got one product, price, image etc. - totalprice also using basic methods, quantity*price, with a toFixed(2) to add two decimals.
 // if cartQuantity is zero or below, renders the empty cart visual. If cartQuantity is 1 or more, renders the image, item name, item price, item quantity and total price, with a delete button next to them.
@@ -67,4 +80,7 @@ function renderCart(){
 function deleteCartItem(){
   cartQuantity = 0;
   renderCart();
+}
+function showCart(){
+  cartElement.classList.toggle('cart-hidden');
 }

@@ -73,6 +73,9 @@
   height: 15px;
   margin-left: auto;
 }
+.cart-hidden {
+  display: none;
+}
 @media (min-width: 801px) {
   .main {
     display: flex;
