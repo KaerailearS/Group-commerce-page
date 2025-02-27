@@ -82,3 +82,4 @@ function showQuantityNotification() {
     quantityNotification.classList.add("notification-hidden");
   }
 }
+
