@@ -39,7 +39,7 @@
           />
         </div>
         <ul class="hamburger-menu" id="menu">
-          <li><a href="https://duckduckgo.com/">Collections</a></li>
+          <li><a href="https://duckduckgo.com/">Collectionss</a></li>
           <li><a href="https://duckduckgo.com/">Men</a></li>
           <li><a href="https://duckduckgo.com/">About</a></li>
           <li><a href="https://duckduckgo.com/">Women</a></li>
@@ -60,7 +60,10 @@
       </div>
 
       <div class="cart-and-avatar">
-        <img class="cart-icon" src="./images/icon-cart.svg" alt="cart-img" />
+        <div class="cart-container">
+          <img class="cart-icon" src="./images/icon-cart.svg" alt="cart-img" />
+          <span class="quantity-notification notification-hidden" id="quantityNotification"></span>
+        </div>
         <a href="https://www.linkedin.com/in/krishnaregmi/"
           ><img
             class="avatar-image"
@@ -70,18 +73,9 @@
       </div> 
       <div class="cart-preview">
         <p class="cart">Cart</p>
-        <span></span>
-       
         <div class="cart-info">
-          <img src="images/image-product-1-thumbnail.jpg" alt="Added product" />
-          <p>Fall Limited Edition Sneakers</p>
-          <span>$125.00 x</span>
-          <img
-            class="delete-btn"
-            src="images/icon-delete.svg"
-            alt="delete-btn"
-          />
-          <button>Checkout</button>
+          <button class="delete-btn js-delete-btn">d</button>
+          <button class="checkout-btn js-checkout-btn"></button>
         </div>
       </div>
     </div>
@@ -115,7 +109,7 @@
             alt="Large image"
           />
         </div>
-        <!--smaller images below, clicking these changes the main image-->
+        <!--smaller images below, clicking these changs the main image-->
         <div id="thumbnail-container" class="thumbnailcontainer">
           <img
             src="images/image-product-1-thumbnail.jpg"
@@ -179,10 +173,10 @@
                 class="lightbox-image"
               />
             </div>
-            <a class="prev" onclick="plusSlides(-1); console.log(slideIndex)"
+            <a class="prev" onclick="plusSlides(-1);"
               >&#10094;</a
             >
-            <a class="next" onclick="plusSlides(1); console.log(slideIndex)"
+            <a class="next" onclick="plusSlides(1);"
               >&#10095;</a
             >
           </div>
@@ -232,16 +226,16 @@
         </div>
         <div class="product-purchase">
           <div class="quantity">
-            <button class="reduce-btn">
+            <button class="reduce-btn js-reduce-btn">
               <img src="images/icon-minus.svg" alt="Minus" />
             </button>
-            <span class="added-quantity">0</span>
-            <button class="add-btn">
+            <span class="added-quantity js-added-quantity">0</span>
+            <button class="add-btn js-add-btn">
               <img src="images/icon-plus.svg" alt="Plus" />
             </button>
           </div>
 
-          <button class="add-to-cart-btn">
+          <button class="add-to-cart-btn js-add-to-cart-btn">
             <img class="icon-cart" src="images/icon-cart.svg" alt="cart icon" />
             Add to cart
           </button>
@@ -250,5 +244,6 @@
     </section>
     <script src="header.js"></script>
     <script src="lightbox.js"></script>
+    <script src="cart.js"></script>
   </body>
 </html>
