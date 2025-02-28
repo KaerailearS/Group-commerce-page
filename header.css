@@ -13,6 +13,7 @@ body {
 .nav-bar-content {
   display: flex;
   align-items: center;
+  z-index: 5;
 }
 
 .header {
@@ -20,6 +21,8 @@ body {
   justify-content: space-between;
   box-shadow: 0 2px 2px -2px gray; /*darker box-shadow for visual clarity*/
   margin: 0px 180px;
+  z-index: 5;
+  background-color: hsl(0, 0%, 100%);
 }
 
 .nav-bar {
