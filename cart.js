@@ -2,21 +2,21 @@
 let cartQuantity = 0;
 let addedCartQuantity = 0;
 let timeoutID; // timeoutID for the cart-visibility timeout
-cartElement = document.querySelector('.cart-preview');
-quantityElement = document.querySelector('.js-added-quantity');
-reduceButton = document.querySelector('.js-reduce-btn');
-addButton = document.querySelector('.js-add-btn');
-addToCartButton = document.querySelector('.js-add-to-cart-btn');
-deleteButton = document.querySelector('.js-delete-btn');
-cartButton = document.querySelector('.js-cart-icon');
-reduceButton.addEventListener('click', ()=>{
-  if(addedCartQuantity>=1){
+cartElement = document.querySelector(".cart-preview");
+quantityElement = document.querySelector(".js-added-quantity");
+reduceButton = document.querySelector(".js-reduce-btn");
+addButton = document.querySelector(".js-add-btn");
+addToCartButton = document.querySelector(".js-add-to-cart-btn");
+deleteButton = document.querySelector(".js-delete-btn");
+cartButton = document.querySelector(".js-cart-icon");
+reduceButton.addEventListener("click", () => {
+  if (addedCartQuantity >= 1) {
     addQuantity(-1);
   }
-  });
-addButton.addEventListener('click', ()=>addQuantity(1));
-addToCartButton.addEventListener('click',()=>addToCart());
-cartButton.addEventListener('click',()=>showCart());
+});
+addButton.addEventListener("click", () => addQuantity(1));
+addToCartButton.addEventListener("click", () => addToCart());
+cartButton.addEventListener("click", () => showCart());
 
 // calling for cart to render on loading - shows empty cart (localstorage added later?)
 renderCart();
@@ -32,11 +32,13 @@ function addToCart(n) {
   quantityElement.textContent = `${addedCartQuantity}`;
   renderCart();
 
-  // shows cart for three seconds when an item is added 
-  cartElement.classList.remove('cart-hidden');
-  if(timeoutID){clearTimeout(timeoutID)};
+  // shows cart for three seconds when an item is added
+  cartElement.classList.remove("cart-hidden");
+  if (timeoutID) {
+    clearTimeout(timeoutID);
+  }
   timeoutID = setTimeout(() => {
-    cartElement.classList.add('cart-hidden');
+    cartElement.classList.add("cart-hidden");
   }, 3000);
   showQuantityNotification();
 }
@@ -84,8 +86,8 @@ function deleteCartItem() {
   cartQuantity = 0;
   renderCart();
 }
-function showCart(){
-  cartElement.classList.toggle('cart-hidden');
+function showCart() {
+  cartElement.classList.toggle("cart-hidden");
 }
 
 function showQuantityNotification() {
@@ -98,4 +100,3 @@ function showQuantityNotification() {
     quantityNotification.classList.add("notification-hidden");
   }
 }
-
