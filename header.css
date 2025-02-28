@@ -13,7 +13,6 @@ body {
 .nav-bar-content {
   display: flex;
   align-items: center;
-  z-index: 5;
 }
 
 .header {
@@ -211,8 +210,8 @@ body {
   .mobile-nav.active-mobile {
     background-color: #fff;
     width: 65%;
+    z-index: 200000;
   }
-
   .hamburger-icon {
     cursor: pointer;
     padding: 25px 30px;

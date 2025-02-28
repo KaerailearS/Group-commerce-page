@@ -4,7 +4,7 @@
 * {
   box-sizing: border-box;
 }
-.taavi-container {
+.left-container {
   max-width: 480px;
   margin-left: 25%;
 }
@@ -328,7 +328,7 @@
     margin: 0;
     padding: 0rem;
   }
-  .taavi-container {
+  .left-container {
     display: none;
   }
   .mobile-gallery {
