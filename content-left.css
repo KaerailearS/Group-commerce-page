@@ -6,7 +6,7 @@
 }
 .taavi-container {
   max-width: 480px;
-  margin-left: 12%;
+  margin-left: 25%;
 }
 .slideshow-container {
   /*slideshow inside the lightbox/modal*/
@@ -144,6 +144,9 @@
   border-radius: 8%;
   cursor: pointer;
 }
+.image-small-4{
+  margin: 0;
+}
 
 .image-small:hover {
   filter: brightness(100%);
@@ -181,11 +184,9 @@
     top: 8.5%;
   }
   .image-large {
-    max-width: 91%;
     border-radius: 5%;
   }
   .image-small {
-    max-width: 18.3%;
     margin-top: 4%;
   }
 }
@@ -208,11 +209,9 @@
     top: 9%;
   }
   .image-large {
-    max-width: 87%;
     border-radius: 5%;
   }
   .image-small {
-    max-width: 17.4%;
     margin-top: 4%;
   }
 }
@@ -235,11 +234,10 @@
     top: 10%;
   }
   .image-large {
-    max-width: 83%;
     border-radius: 5%;
+    margin-top: 20px;
   }
   .image-small {
-    max-width: 16.3%;
     margin-top: 4%;
   }
 }
@@ -262,17 +260,14 @@
     top: 11%;
   }
   .image-large {
-    max-width: 79%;
     border-radius: 5%;
+    margin-top: 25px;
   }
   .image-small {
-    max-width: 15.3%;
     margin-top: 4%;
   }
 
-  .taavi-container {
-    margin-left: 8%;
-  }
+
 }
 @media (max-width: 1000px) {
   .prev {
@@ -293,21 +288,13 @@
     top: 12%;
   }
   .image-large {
-    max-width: 75%;
     border-radius: 5%;
+    margin-top: 30px;
   }
   .image-small {
-    max-width: 14.2%;
     margin-top: 4%;
   }
 
-  .taavi-container {
-    margin-left: 4%;
-  }
-
-  .modal-image-container {
-    width: 105%;
-  }
 }
 @media (max-width: 900px) {
   .prev {
@@ -328,11 +315,10 @@
     top: 13%;
   }
   .image-large {
-    max-width: 71%;
     border-radius: 5%;
+    margin-top: 35px;
   }
   .image-small {
-    max-width: 13%;
     margin-top: 4%;
   }
 }
@@ -342,25 +328,28 @@
     margin: 0;
     padding: 0rem;
   }
+  .taavi-container {
+    display: none;
+  }
   .mobile-gallery {
     display: block;
+    position: relative;
+    bottom: 37px;
+    z-index: 1;
+  }
+  .mobile-gallery-slide {
+    display: none;
   }
   .mobile-gallery-image {
     width: 375px;
   }
-  .taavi-container {
-    display: none;
-  }
-  .mobile-gallery-slide {
-    display: none; /* Hide all slides by default */
-  }
   .mobile-gallery-slide img {
-    width: 100%; /* Make images responsive */
+    width: 100%;
   }
   .mobile-prev {
     cursor: pointer;
     position: absolute;
-    top: 27%;
+    top: 45%;
     left: 4%;
     padding: 8px 16px;
     color: black;
@@ -374,7 +363,7 @@
   .mobile-next {
     cursor: pointer;
     position: absolute;
-    top: 27%;
+    top: 45%;
     right: 4%;
     padding: 8px 16px;
     color: black;
