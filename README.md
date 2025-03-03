@@ -41,12 +41,14 @@ We also added these functionalities;
 ### Continued development
 
 Darja: Nothing specific, open to everything.
+<br>
 Oskari: More Scrum teamwork. 
+<br>
 Taavi: Avoiding CSS like the plague.
 
 ### Useful resources
 
-- [Duck AI](duck.ai) - Using AI to check code, point out errors and optimizations as well as give hints on how to create a functionality.
+- [Duck AI](https://duck.ai) - Using AI to check code, point out errors and optimizations as well as give hints on how to create a functionality.
 - [w3schools](https://www.w3schools.com/) - W3Schools has everything you'll need for HTML, CSS and JavaScript.
 - [Scrum](https://www.atlassian.com/agile/scrum) - We worked with this as our basic methodology and it helped us have clear objectives and work flow.
 - [Google](https://www.google.fi/) - Google!
