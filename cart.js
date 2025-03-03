@@ -1,14 +1,16 @@
-// javascript elements, buttons etc. on top
+// global variables and javascript elements on top
 let cartQuantity = 0;
 let addedCartQuantity = 0;
 let timeoutID; // timeoutID for the cart-visibility timeout
 cartElement = document.querySelector(".cart-preview");
 quantityElement = document.querySelector(".js-added-quantity");
+// button queryselectors for all buttons
 reduceButton = document.querySelector(".js-reduce-btn");
 addButton = document.querySelector(".js-add-btn");
 addToCartButton = document.querySelector(".js-add-to-cart-btn");
 deleteButton = document.querySelector(".js-delete-btn");
 cartButton = document.querySelector(".js-cart-icon");
+// event listeners for each button to add functionalities
 reduceButton.addEventListener("click", () => {
   if (addedCartQuantity >= 1) {
     addQuantity(-1);
@@ -18,9 +20,9 @@ addButton.addEventListener("click", () => addQuantity(1));
 addToCartButton.addEventListener("click", () => addToCart());
 cartButton.addEventListener("click", () => showCart());
 
-// calling for cart to render on loading - shows empty cart (localstorage added later?)
+// calling for cart to render on loading - shows empty cart 
 renderCart();
-// function to add quantity to queue and change chosen quantity on webpage (currently allows negative values, change later?)
+// function to add quantity to queue and change chosen quantity on webpage
 function addQuantity(n) {
   addedCartQuantity += n;
   quantityElement.textContent = `${addedCartQuantity}`;
@@ -28,7 +30,7 @@ function addQuantity(n) {
 // function to add queued quantity to main cart quantity, reset queue'd quantity, and then render cart with new quantity
 function addToCart(n) {
   cartQuantity += addedCartQuantity;
-  //  addedCartQuantity = 0; // remove comment if you want to empty queue after adding to cart
+  addedCartQuantity = 0; //  comment if you want to not empty queue after adding to cart
   quantityElement.textContent = `${addedCartQuantity}`;
   renderCart();
 
@@ -86,10 +88,11 @@ function deleteCartItem() {
   cartQuantity = 0;
   renderCart();
 }
+// function that... shows the cart
 function showCart() {
   cartElement.classList.toggle("cart-hidden");
 }
-
+// function for the quantity notification on top of the cart button, hidden with 0 or below, visible with 1 or above
 function showQuantityNotification() {
   const quantityNotification = document.getElementById("quantityNotification");
 
