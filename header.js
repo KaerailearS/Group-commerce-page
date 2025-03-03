@@ -9,4 +9,6 @@ function toggleMenu() {
   close.classList.toggle("active-close");
   const background = document.body;
   background.classList.toggle("active-background");
+  const header = document.getElementById("header");
+  header.classList.toggle("active-header");
 }
