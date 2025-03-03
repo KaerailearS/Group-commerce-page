@@ -1,6 +1,7 @@
 # Frontend Mentor - E-commerce product page solution
 
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).
+This is our solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6).<br>
+We built it as a group of three, as part of our HTML/CSS/Javascript workshop learning.
 
 ### The challenge
 Originally the project description had these requirements;
