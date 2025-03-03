@@ -1,16 +1,21 @@
+// global variables and elements on top
 const imageElement = document.getElementById("modal-image");
+const modalElement = document.getElementById("theModal");
+const spanElement = document.getElementsByClassName("close")[0];
 
+// onclick listener for the image that pops open the lightbox gallery, and for closing it
 imageElement.onclick = () => {
   modalElement.style.display = "block";
 };
-
-// function to check the size of the window, to only let the lightbox be opened on large windows
-function checkWindowSize() {
-  if (window.innerWidth > 799) {
+spanElement.onclick = () => {
+  modalElement.style.display = "none";
+};
+window.onclick = (event) => {
+  if (event.target === modalElement) {
+    modalElement.style.display = "none";
   }
-}
-
-// gallery script
+};
+// gallery script - using a for loop to loop through the array of images and show the image with the current slideIndex value
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -40,19 +45,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   thumbnails[slideIndex - 1].className += " active";
 }
-// modal script
-const modalElement = document.getElementById("theModal");
-const spanElement = document.getElementsByClassName("close")[0];
 
-spanElement.onclick = () => {
-  modalElement.style.display = "none";
-};
-window.onclick = (event) => {
-  if (event.target === modalElement) {
-    modalElement.style.display = "none";
-  }
-};
-// spaghetti code
 // event listener for changing the highlighted picture on the main site
 document
   .getElementById("thumbnail-container")
@@ -93,7 +86,7 @@ document
       event.target.classList.add("active-thumbnail");
     }
   });
-//mobile gallery functions
+//mobile gallery functions - similar to desktop, just different class/element names
 let mobileSlideIndex = 0;
 mobileShowSlides();
 function mobileShowSlides() {
