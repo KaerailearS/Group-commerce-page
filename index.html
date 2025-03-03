@@ -1,42 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="content-left.css" />
+    <link rel="stylesheet" href="content-right.css" />
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div class="header" id="header">
+      <div class="mobile-nav" id="mobile-nav">
+        <div class="hamburger-icon" id="hamburger" onclick="toggleMenu()">
+          <img
+            class="hamburger-image"
+            src="./images/icon-menu.svg"
+            alt="menu-icon"
+          />
+        </div>
+        <div class="close-icon" id="close" onclick="toggleMenu()">
+          <img
+            class="close-image"
+            src="./images/icon-close.svg"
+            alt="close-icon"
+          />
+        </div>
+        <ul class="hamburger-menu" id="menu">
+          <li><a href="https://duckduckgo.com/">Collections</a></li>
+          <li><a href="https://duckduckgo.com/">Men</a></li>
+          <li><a href="https://duckduckgo.com/">About</a></li>
+          <li><a href="https://duckduckgo.com/">Women</a></li>
+          <li><a href="https://duckduckgo.com/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-bar">
+        <a href=""
+          ><img class="site-logo" src="./images/logo.svg" alt="sneakers-logo"
+        /></a>
+        <div class="nav-bar-content">
+          <span><a href="https://duckduckgo.com/">Collections</a></span>
+          <span><a href="https://duckduckgo.com/">Men</a></span>
+          <span><a href="https://duckduckgo.com/">About</a></span>
+          <span><a href="https://duckduckgo.com/">Women</a></span>
+          <span><a href="https://duckduckgo.com/">Contact</a></span>
+        </div>
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-</head>
-<body>
+      <div class="cart-and-avatar">
+        <div class="cart-container">
+          <img class="cart-icon js-cart-icon"  src="./images/icon-cart.svg" alt="cart-img" />
+          <span class="quantity-notification notification-hidden" id="quantityNotification"></span>
+        </div>
+        <a href="https://www.linkedin.com/in/krishnaregmi/"
+          ><img
+            class="avatar-image"
+            src="./images/Krishna.png"
+            alt="avatar-img"
+        /></a>
+      </div> 
+      <div class="cart-preview cart-hidden">
+        <p class="cart">Cart</p>
+        <div class="cart-info">
+          <button class="delete-btn js-delete-btn">d</button>
+          <button class="checkout-btn js-checkout-btn"></button>
+        </div>
+      </div>
+    </div>
+      <!-- the gallery for mobile devices, invisible on desktop/larger devices-->
+      <div class="mobile-gallery">
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-1.jpg" alt="Image 1" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-2.jpg" alt="Image 2" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-3.jpg" alt="Image 3" class="mobile-gallery-image">
+        </div>
+        <div class="mobile-gallery-slide">
+          <img src="images/image-product-4.jpg" alt="Image 4" class="mobile-gallery-image">
+        </div>
+        <button class="mobile-prev" onclick="mobileChangeSlide(-1)">&#10094;</button>
+        <button class="mobile-next" onclick="mobileChangeSlide(1)">&#10095;</button>
+      </div>
+    <section class="main">
+      <div class="left-container">
+        <!--image that opens the lightbox when clicked-->
+        <div class="modal-image-container">
+          <img
+            id="modal-image"
+            class="image-large"
+            src="images/image-product-1.jpg"
+            alt="Large image"
+          />
+        </div>
+        <!--smaller images below, clicking these changs the main image-->
+        <div id="thumbnail-container" class="thumbnailcontainer">
+          <img
+            src="images/image-product-1-thumbnail.jpg"
+            alt="image1thumbnail"
+            class="image-small js-image-small active-thumbnail"
+            data-large="images/image-product-1.jpg"
+            data-number="1"
+          />
+          <img
+            src="images/image-product-2-thumbnail.jpg"
+            alt="image2thumbnail"
+            class="image-small js-image-small"
+            data-large="images/image-product-2.jpg"
+            data-number="2"
+          />
+          <img
+            src="images/image-product-3-thumbnail.jpg"
+            alt="image3thumbnail"
+            class="image-small js-image-small"
+            data-large="images/image-product-3.jpg"
+            data-number="3"
+          />
+          <img
+            src="images/image-product-4-thumbnail.jpg"
+            alt="image4thumbnail"
+            class="image-small image-small-4 js-image-small"
+            data-large="images/image-product-4.jpg"
+            data-number="4"
+          />
+        </div>
+      </div>
+      <!-- the modal/lightbox itself-->
+      <div id="theModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="slideshow-container" style="text-align: center">
+            <div class="mySlides fade">
+              <img
+                src="images/image-product-1.jpg"
+                alt="image1"
+                class="lightbox-image"
+              />
+            </div>
+            <div class="mySlides fade">
+              <img
+                src="images/image-product-2.jpg"
+                alt="image2"
+                class="lightbox-image"
+              />
+            </div>
+            <div class="mySlides fade">
+              <img
+                src="images/image-product-3.jpg"
+                alt="image3"
+                class="lightbox-image"
+              />
+            </div>
+            <div class="mySlides fade">
+              <img
+                src="images/image-product-4.jpg"
+                alt="image4"
+                class="lightbox-image"
+              />
+            </div>
+            <a class="prev" onclick="plusSlides(-1);"
+              >&#10094;</a
+            >
+            <a class="next" onclick="plusSlides(1);"
+              >&#10095;</a
+            >
+          </div>
+          <br/>
+          <!-- the navigational buttons for the gallery-->
+          <div id="modal-thumbnail-container" style="text-align: center">
+            <img
+              src="images/image-product-1-thumbnail.jpg"
+              alt="image1thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-2-thumbnail.jpg"
+              alt="image2thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-3-thumbnail.jpg"
+              alt="image3thumbnail"
+              class="thumbnail"
+            />
+            <img
+              src="images/image-product-4-thumbnail.jpg"
+              alt="image4thumbnail"
+              class="thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- the main text container with product info etc.-->
+      <div class="right-container">
+        <div class="product-detail">
+          <h2 class="company-name">SNEAKER COMPANY</h2>
+          <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+        </div>
 
-  shamalama
-  Collections
-  Men
-  Women
-  About
-  Contact
+        <div class="product-price">
+          <div class="price-row">
+            <div class="new-price">$125.00</div>
+            <div class="discount">50%</div>
+          </div>
+          <div class="origin-price">$250.00</div>
+        </div>
+        <div class="product-purchase">
+          <div class="quantity">
+            <button class="reduce-btn js-reduce-btn">
+              <img src="images/icon-minus.svg" alt="Minus" />
+            </button>
+            <span class="added-quantity js-added-quantity">0</span>
+            <button class="add-btn js-add-btn">
+              <img src="images/icon-plus.svg" alt="Plus" />
+            </button>
+          </div>
 
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-  <script src="script.js"></script>
-</body>
+          <button class="add-to-cart-btn js-add-to-cart-btn">
+            <img class="icon-cart" src="images/icon-cart.svg" alt="cart icon" />
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="header.js"></script>
+    <script src="lightbox.js"></script>
+    <script src="cart.js"></script>
+  </body>
 </html>
